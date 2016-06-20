@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return view('index');
-});
+// Route::get('/', function () {
+//     //return view('welcome');
+//     return view('index');
+// });
 
 //Registration
 Route::any('/register', ['uses'=>'Auth\AuthController@getRegister'])->name('registration_form');
@@ -22,7 +22,7 @@ Route::post('/register', ['uses'=>'Auth\AuthController@postRegister'])->name('do
 
 
 // Authentication
-Route::get('/admin', ['uses'=>'Admin\AdminController@index'])->name('admin_index');
+Route::get('/', ['uses'=>'Admin\AdminController@index'])->name('admin_index');
 Route::get('/login', ['uses'=>'Auth\AuthController@getLogin'])->name('login_form');
 Route::post('/login', ['uses'=>'Auth\AuthController@postLogin'])->name('do_login');
 Route::any('/logout', ['uses'=>'Auth\AuthController@logout'])->name('do_logout');
