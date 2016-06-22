@@ -41,6 +41,7 @@ Route::any('/admin/users', ['uses'=>'Admin\UserController@users'])->name('admin_
 Route::any('/admin/contests', ['uses'=>'Admin\ContestController@get_all_contest'])->name('admin_contest_listing');
 Route::any('/admin/contest/add', ['uses'=>'Admin\ContestController@add_contest'])->name('admin_add_contest');
 Route::post('/admin/contest/add', ['uses'=>'Admin\ContestController@do_add_contest'])->name('admin_do_add_contest');
+Route::any('/admin/contestants', ['uses'=>'Admin\ContestController@get_all_contestant'])->name('admin_contestant_listing');
 
 // Test
 Route::get('/test', ['uses'=>'Admin\AdminController@test'])->name('test');

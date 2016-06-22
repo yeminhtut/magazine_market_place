@@ -15,8 +15,7 @@ class ContestController extends Controller
     }
 
     public function get_all_contest(){
-        $data['contests'] = \App\Classes\Contest::orderby('id', 'desc')->paginate(1);   
-        //var_dump($data);exit;     
+        $data['contests'] = \App\Classes\Contest::orderby('id', 'desc')->paginate(1); 
         return view('admin.contest', $data);
     }
 
@@ -46,5 +45,9 @@ class ContestController extends Controller
         $contest->save();
         
         return redirect()->route('admin_contest_listing')->with('status', 'New contest created!');
+    }
+
+    public function get_all_contestant(Request $request){
+        echo 'show all contestants';
     }
 }

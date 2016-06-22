@@ -23,15 +23,9 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     @yield('head')
     <!-- <link rel="stylesheet" href="/css/admin.css?<?=time()?>"/> -->
-    <!--[if lt IE 9]>
-        <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
-    <![endif]-->
   </head>
   <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
+    
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -46,7 +40,8 @@
             </div>
           @if(Auth::check())
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">                    
+                <ul class="nav navbar-nav navbar-right">   
+                    <li><a href="{{route('admin_contest_listing')}}">Contests</a></li>                 
                     <li><a href="{{route('do_logout')}}">Logout</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
