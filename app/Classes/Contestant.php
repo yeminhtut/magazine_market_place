@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contestant extends Model
 {
-    protected $table = 't_contest';
+    protected $table = 't_contestants';
 
     protected $fillable = [
         'contest_id', 'email', 'name','location','ph','nric','source','user_ip','browser'
